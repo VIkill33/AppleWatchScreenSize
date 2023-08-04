@@ -19,15 +19,15 @@ import WatchKit
  */
 @available(watchOS 4.0, *)
 public struct ScreenSize: Hashable {
-    var width: CGFloat
-    var height: CGFloat
+    public var width: CGFloat
+    public var height: CGFloat
     
     /**
      The corner size value associated with this screen size.
      
      If no corner size is associated with the current screen size, it returns `nil`.
      */
-    var cornerSize: Int? {
+    public var cornerSize: Int? {
         get {
             let dic: [ScreenSize: Int?] = [
                 ScreenSize(width: 136, height: 170): nil,
