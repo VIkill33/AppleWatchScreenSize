@@ -18,7 +18,7 @@ import WatchKit
  - Note: The `==` operator compares two `ScreenSize` instances for equality based on their width and height dimensions.
  */
 @available(watchOS 4.0, *)
-struct ScreenSize: Hashable {
+public struct ScreenSize: Hashable {
     var width: CGFloat
     var height: CGFloat
     
