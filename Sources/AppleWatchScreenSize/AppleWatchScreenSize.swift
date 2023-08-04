@@ -48,7 +48,7 @@ public struct ScreenSize: Hashable {
      - Parameter width: The width dimension of the screen size. It defaults to the screen bounds' width of the current device.
      - Parameter height: The height dimension of the screen size. It defaults to the screen bounds' height of the current device.
      */
-    init(width: CGFloat = WKInterfaceDevice.current().screenBounds.size.width, height: CGFloat = WKInterfaceDevice.current().screenBounds.size.height) {
+    public init(width: CGFloat = WKInterfaceDevice.current().screenBounds.size.width, height: CGFloat = WKInterfaceDevice.current().screenBounds.size.height) {
         self.width = width
         self.height = height
     }
@@ -58,7 +58,7 @@ public struct ScreenSize: Hashable {
      
      - Parameter hasher: The hasher used to combine the values.
      */
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(width)
         hasher.combine(height)
     }
@@ -71,7 +71,7 @@ public struct ScreenSize: Hashable {
      
      - Returns: `true` if the width and height dimensions of both instances are equal, otherwise `false`.
      */
-    static func ==(lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+    public static func ==(lhs: ScreenSize, rhs: ScreenSize) -> Bool {
         return lhs.width == rhs.width && lhs.height == rhs.height
     }
 }
