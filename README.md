@@ -1,6 +1,6 @@
 # AppleWatchScreenSize
 
-A simple way to get screen size and rounded corner size of Apple Watch.
+An easy way to get screen size and rounded corner size of Apple Watch.
 
 # Installation
 Require watchOS 4 or higher.
@@ -35,6 +35,6 @@ The preview will be like:
 
 # How does it work
 The data comes from https://screensizes.app/?compare=applewatch.
-Since Apple Watch with same resolution share the same rounded corner size, it's not hard to refer the corner size from given screen size. Before series 3 Apple Watch just have a rectangle screen, so the corner size of them will return **nil** instead.
+Since Apple Watch with same resolution share the same rounded corner size, it's not hard to infer the corner size from given screen size. Before series 3 Apple Watch just have a rectangle screen, so the corner size of them will return **nil** instead.
 
 It can't be denied that Apple may someday release a new watch with same resolution but different corner size, but it works fine by now ;)
