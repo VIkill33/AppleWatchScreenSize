@@ -1,3 +1,4 @@
+#if os(watchOS)
 import WatchKit
 
 /**
@@ -75,3 +76,4 @@ public struct ScreenSize: Hashable {
         return lhs.width == rhs.width && lhs.height == rhs.height
     }
 }
+#endif
