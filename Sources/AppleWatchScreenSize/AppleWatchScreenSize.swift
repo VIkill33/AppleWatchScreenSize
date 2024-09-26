@@ -37,7 +37,9 @@ public struct ScreenSize: Hashable {
                 ScreenSize(width: 176, height: 215): 38,
                 ScreenSize(width: 184, height: 224): 34,
                 ScreenSize(width: 198, height: 242): 41,
-                ScreenSize(width: 205, height: 251): 54
+                ScreenSize(width: 205, height: 251): 54,
+                ScreenSize(width: 187, height: 223): 45,
+                ScreenSize(width: 208, height: 248): 49
             ]
             return dic[self] ?? nil
         }
