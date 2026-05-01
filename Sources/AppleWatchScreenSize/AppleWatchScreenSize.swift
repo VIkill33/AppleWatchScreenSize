@@ -28,18 +28,19 @@ public struct ScreenSize: Hashable {
      
      If no corner size is associated with the current screen size, it returns `nil`.
      */
-    public var cornerSize: Int? {
+    public var cornerSize: CGFloat? {
         get {
-            let dic: [ScreenSize: Int?] = [
-                ScreenSize(width: 136, height: 170): nil,
-                ScreenSize(width: 156, height: 195): nil,
-                ScreenSize(width: 162, height: 197): 28,
-                ScreenSize(width: 176, height: 215): 38,
-                ScreenSize(width: 184, height: 224): 34,
-                ScreenSize(width: 198, height: 242): 41,
-                ScreenSize(width: 205, height: 251): 54,
-                ScreenSize(width: 187, height: 223): 45,
-                ScreenSize(width: 208, height: 248): 49
+            let dic: [ScreenSize: CGFloat?] = [
+                ScreenSize(width: 136, height: 170): nil, // 1, 2, and 3 - 38mm
+                ScreenSize(width: 156, height: 195): nil, // 1, 2, and 3 - 42mm
+                ScreenSize(width: 162, height: 197): 28, // 4, 5, 6, and SE (all) - 40mm
+                ScreenSize(width: 176, height: 215): 38, // 7, 8, and 9 - 41mm
+                ScreenSize(width: 184, height: 224): 34, // 4, 5, 6, and SE (all) - 44mm
+                ScreenSize(width: 187, height: 223): 45, // 10, 11 - 42mm
+                ScreenSize(width: 198, height: 242): 41, // 7, 8, and 9 - 45mm
+                ScreenSize(width: 205, height: 251): 54.5, // Ultra 1 & 2 - 49mm
+                ScreenSize(width: 208, height: 248): 51, // 10, 11 - 46mm
+                ScreenSize(width: 211, height: 257): 57, // Ultra 3 - 49mm
             ]
             return dic[self] ?? nil
         }
@@ -51,7 +52,10 @@ public struct ScreenSize: Hashable {
      - Parameter width: The width dimension of the screen size. It defaults to the screen bounds' width of the current device.
      - Parameter height: The height dimension of the screen size. It defaults to the screen bounds' height of the current device.
      */
-    public init(width: CGFloat = WKInterfaceDevice.current().screenBounds.size.width, height: CGFloat = WKInterfaceDevice.current().screenBounds.size.height) {
+    public init(
+        width: CGFloat = WKInterfaceDevice.current().screenBounds.size.width,
+        height: CGFloat = WKInterfaceDevice.current().screenBounds.size.height
+    ) {
         self.width = width
         self.height = height
     }
